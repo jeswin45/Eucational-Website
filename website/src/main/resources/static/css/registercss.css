@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+
+
+
+#container{
+    height: 900px;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    
+}
+#reg{
+    color: rgb(255, 231, 76);
+  
+    text-align: center;
+
+
+}
+#regdiv{
+    height: 900px;
+    width: 90%;
+    background-color:azure; 
+    
+
+}
+
+#div1{
+  
+    border-width: 2px;
+    border: #050a4c;
+    border-radius: 2px;
+   
+  
+}
+#sec1,#sec2{
+    
+    width: 17cm;
+}
+#sec2{
+    
+    width: 17cm;
+}
+
+#regbutton{
+    background-color: greenyellow;
+    width: 6cm;
+    margin-top: 200px;
+}

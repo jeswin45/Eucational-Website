@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/headercss.css}">
+<style type="text/css">
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: visible; /* Ensure overflow is not hidden */
+}
+
+#headerdiv {
+    background-color: blue;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Define a position value */
+    z-index: 100;
+}
+
+.atag{
+    text-decoration: none;
+}
+.regbutton{
+  color: orange;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid orange;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+#regbutton:hover {
+  color: white;
+  background-color: orange;
+}
+
+.regbutton::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: orange;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.regbutton:hover::before {
+  width: 160%;
+}
+
+#blogo{
+    height: 50px;
+    width: 50px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+            .header-logo {
+                text-align: center; /* Center align the logo */
+            }
+            .header-options {
+                display: none; /* Hide by default */
+                text-align: center; /* Center align the options */
+            }
+            .header-options.active {
+                display: block; /* Show when active */
+            }
+        }
+</style>
+</head>
+<body>
+ <div id="headerdiv">
+ <section id="header" th:fragment="header">
+      <div class=" container offset-1 d-flex align-items-center">
+      <div class="container row text-light fw-bolder text-center mt-3">
+      <div class="col-1"><a class="atag text-light" href="home">Home</a></div>
+      <div class="col-2"><a class="atag text-light" href="">Course</a></div>
+      <div class="col-2"><a class="atag text-light" href="">Know Scope India</a></div>
+      <div  class="col-1"><img id="blogo" th:src="@{/images/scope-india-logo-bird.png}" alt=""></div>
+      <div class="col-2"><a class="atag text-light" href="contact">Contact Us</a></div>
+      <div class="col-2"><a class="atag text-light" href="login"><button class="regbutton">login</button></a></div>
+      <div class="col-2"><a class="atag text-light" href="register"><button class="regbutton">Register</button></a></div>
+  </div>
+</div>
+  </section>
+</div>  
+
+
+<script>
+    // JavaScript function to toggle header options on mobile
+    
+</script>
+</body>
+</html>

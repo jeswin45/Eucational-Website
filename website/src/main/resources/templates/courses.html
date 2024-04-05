@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Sign-Up</title>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+                /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 2; /* Ensure the header is above the navigation bar */
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f2f2f2;
+            width: 150px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: 60px; /* Adjusted for header height */
+            overflow-y: auto;
+            z-index: 1; /* Ensure the navigation bar is behind the header */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        #out{
+        margin-left: 10px;
+        width: 100px;
+        }
+        #logo{
+    	height: 50px;
+   		 width: 50px;
+    	background-attachment: fixed;
+   		 background-repeat: no-repeat;
+   		 margin-left:20%; 
+}
+        #dash{
+        height: 150px;
+        width: 200px;
+        margin-left: 5px;
+        margin-right: 5px;
+        top:10px;
+        }
+        a{
+        margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Add Courses</h1>
+</header>
+
+<nav>
+    <ul class="list-unstyled">
+        <li><a href="#" class="nav-link">Edit profile</a></li>
+        <li><a href="changepassword" class="nav-link">Change password</a></li>
+        <li><a href="logoutuser" class="nav-link">Logout</a></li>
+        <li><a href="home" class="nav-link">Go to home</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <h1 style="color:black;text-align:center;">Add Course</h1>
+    <table id="pickedCourseTable">
+         <thead>
+            <tr>
+                <th>Id</th>
+                <th>Duration</th>
+                <th>Fee</th>
+                <th>CourseName</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="course : ${courses}">
+                <td th:text="${course.id}"></td>
+                <td th:text="${course.duration}"></td>
+                <td th:text="${course.fee}"></td>
+                <td th:text="${course.name}"></td>
+                <td>
+                    <form th:action="@{/addpickedcourse}" method="post">
+                        <input type="hidden" th:name="id" th:value="${course.id}">
+                        <button class="btn btn-success" type="button">Add Course</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

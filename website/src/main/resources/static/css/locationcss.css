@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.card {
+        
+            border: 1px solid white;
+            background-color: #050a4c;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            display: flex;
+            height: 250px;
+            width: 450px;
+        }
+        .card-body {
+        background-color: #050a4c;
+
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-link {
+            color: #3498db;
+        }
+        .container-fluid{
+        background-color: #050a4c;
+        }
+        .card-title,.card-text{
+        color:white;
+        }

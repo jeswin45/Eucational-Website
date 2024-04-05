@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Navigation Bar and Rectangles</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Style for header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 2; /* Ensure the header is above the navigation bar */
+        }
+        /* Style for navigation bar */
+        nav {
+            background-color: #f2f2f2;
+            width: 150px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: 60px; /* Adjusted for header height */
+            overflow-y: auto;
+            z-index: 1; /* Ensure the navigation bar is behind the header */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Style for rectangles */
+        .rectangle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 40px); /* Adjusted for header and margin */
+            margin-left: 150px; /* Adjusted for navigation bar width */
+            padding-top: 60px; /* Adjusted for header height */
+        }
+        .rectangle {
+            width: 200px;
+            height: 150px;
+            margin: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        /* Different colors for rectangles */
+        .rectangle:nth-child(1) {
+            background-color: #ff6347; /* Tomato */
+        }
+        .rectangle:nth-child(2) {
+            background-color: #87ceeb; /* Sky Blue */
+        }
+        .rectangle:nth-child(3) {
+            background-color: #7cfc00; /* Lawn Green */
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+    <h1>Welcome <span th:text="${username}"></span></h1>
+</header>
+
+
+
+<nav class="bg-light">
+    <ul class="list-unstyled">
+        <li><a href="editprofile" class="nav-link">Edit profile</a></li>
+        <li><a href="courses" class="nav-link">Add Courses</a></li>
+        <li><a href="changepassword" class="nav-link">Change password</a></li>
+        <li><a href="logoutuser" class="nav-link">Logout</a></li>
+        <li><a href="home" class="nav-link">Go to home</a></li>
+    </ul>
+</nav>
+
+<div class="rectangle-container">
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+</div>
+
+<!-- Bootstrap JS and dependencies (Optional) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

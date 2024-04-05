@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylsheet" th:href="@{/css/location.css}">
+</head>
+<style>
+ .card {
+        
+            border: 1px solid white;
+            background-color: #050a4c;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            display: flex;
+            height: 250px;
+            width: 450px;
+        }
+        .card-body {
+        background-color: #050a4c;
+
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-link {
+            color: #3498db;
+        }
+        .container-fluid{
+        background-color: #050a4c;
+        }
+        .card-title,.card-text{
+        color:white;
+        }
+        
+</style>
+<body>
+<div class="container-fluid" th:fragment="location">
+    <!-- First and Third Columns -->
+    <div class="row justify-content-center">
+        <!-- Location 1 -->
+        <div class="col-5 offset-1 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-light">Technopark TVM, Kerala</h5>
+                    <p class="card-text">Opp. Technopark, Trivandrum, Kerala 695581</p>
+                    <p class="card-text">9746936073</p>
+                    <p class="card-text">technopark@scopeindia.org</p>
+                    <a href="www.scopeindia.org" class="card-link">www.scopeindia.org</a>
+                    <a href="#" class="card-link">Location Route Map</a>
+                </div>
+            </div>
+        </div>
+        <!-- Location 3 -->
+        <div class="col-5 offset-1 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-light">Kochi, Kerala</h5>
+                    <p class="card-text">SCOPE INDIA,Visiont Nagar Rd,Kaloor,Kochi,Kerala 682025</p>
+                    <p class="card-text">7592394841</p>
+                    <p class="card-text">kochi@scopeindia.org</p>
+                    <a href="www.scopeindia.org" class="card-link">www.scopeindia.org</a>
+                    <a href="#" class="card-link">Location Route Map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second and Fourth Columns -->
+    <div class="row justify-content-center">
+        <!-- Location 2 -->
+        <div class="col-5 offset-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-light">Thampanoor TVM, Kerala</h5>
+                    <p class="card-text">TC 25/1403/Athena Plaza,S S Kovil Road,Thampanoor, Trivandrum,Kerala 695001</p>
+                    <p class="card-text">9745938073</p>
+                    <p class="card-text">info@scopeindia.org</p>
+                    <a href="www.scopeindia.org" class="card-link">www.scopeindia.org</a>
+                    <a href="#" class="card-link">Location Route Map</a>
+                </div>
+            </div>
+        </div>
+        <!-- Location 4 -->
+        <div class="col-5 offset-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-light">Nagercoil, Tamil Nadu</h5>
+                    <p class="card-text">SCOPE INDIA,Near WCC College,Pallace Rd,Nagercoil, Tamil Nadu 629001</p>
+                    <p class="card-text">8075638185</p>
+                    <p class="card-text">ngl@scopeindia.org</p>
+                    <a href="www.scopeindia.org" class="card-link">www.scopeindia.org</a>
+                    <a href="#" class="card-link">Location Route Map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Centered 5th row -->
+    <div class="row justify-content-center">
+        <div class="col-5 offset-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-light">Nagercoil, Tamil Nadu</h5>
+                    <p class="card-text">SCOPE INDIA ,Pharma Street ,51/2 Ward 28 ,Distillery Road , Putheri Nagercoil ,(Near WCC )un</p>
+                    <p class="card-text">8075638185</p>
+                    <p class="card-text">ngl@scopeindia.org</p>
+                    <a href="www.scopeindia.org" class="card-link">www.scopeindia.org</a>
+                    <a href="#" class="card-link">Location Route Map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

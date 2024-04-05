@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body{
+	background-color: #050a4c important;
+}
+#headerdiv{
+	background-color: #050a4c important;
+	position: sticky;
+}
+#header {
+
+    width: 100%;
+    height: 70px;
+    background-color: #050a4c important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+   
+}
+.atag{
+    text-decoration: none;
+}
+.regbutton {
+  color: orange;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid orange;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.regbutton:hover, .regbutton:hover * {
+  color: white; /* Change the text color to white on hover */
+  background-color: orange;
+}
+
+.regbutton::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: orange;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.regbutton:hover::before {
+  width: 160%;
+}
+
+#blogo{
+   
+ 
+    height: 50px;
+    width: 50px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+            .header-logo {
+                text-align: center; /* Center align the logo */
+            }
+            .header-options {
+                display: none; /* Hide by default */
+                text-align: center; /* Center align the options */
+            }
+            .header-options.active {
+                display: block; /* Show when active */
+            }
+        }
